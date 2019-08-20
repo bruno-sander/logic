@@ -13,10 +13,10 @@ function computeDiscount() {
  var afterDiscount=(amount * 0.90);
  var grandTotal;
 
- if (amount>100 && (day==3 || day==4)) {
- grandTotal=afterDiscount+(afterDiscount * 0.05);
+ if (amount>50 && (day==2 || day==3)) {
+ grandTotal=afterDiscount+(afterDiscount * 0.06);
  } else {
- grandTotal=amount + (amount * 0.05) ;
+ grandTotal=amount + (amount * 0.06) ;
  }
  document.getElementById('display').innerHTML="The total amount is $"+grandTotal;
 }
