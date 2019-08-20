@@ -15,9 +15,9 @@ function alarmClock() {
 
  if ((dayOfWeek==0 || dayOfWeek==6) || (month==0 && dayOfMonth==1) || (month==6 && dayOfMonth==4) || (month==11 && dayOfMonth==25)){
 
- status="Go to sleep !!";
+ status="Sleep in.";
  } else {
- status="You can't sleep now!";
+ status="Get up!";
  }
  document.getElementById('display').innerHTML=status;
 }
