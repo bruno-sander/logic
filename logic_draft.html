@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<title>Repetition</title>
+ <script type="text/javascript">
+function oddadd() {
+        var number = parseInt(document.getElementById('box').value);
+        var i;
+        var result;
+ 
+if(number < 1) {
+        return 0;
+  }
+result = 0;
+        for(i = number - 1; i > 0; i--) {
+        if(i % 2 != 0) {
+        result = result + i;
+     }
+        }
+ document.getElementById('outputdiv').innerHTML = result;
+}
+</script>
+</head>
+<body>
+  <h3>Enter a number</h3>
+  <input type="text" id="box" size="3" value="0">    
+  <button type="button" onclick="oddadd()">Go!</button>
+  <div id="outputdiv"></div>
+</body>
+</html>
