@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<title>5 times 1,2,3,4,5....</title>
+</head>
+
+<body>
+<form>
+<button type="button" onclick="times()">Click here</button>
+</form>
+
+<script>
+function times() {
+var n = 5;
+var i = 1;
+var message = " ";
+
+while (i <= 12) {
+message += "5 x " + i + " = " + n + "<br>";
+n += 5;
+i += 1;
+}
+document.getElementById("output").innerHTML = message;
+};
+</script>
+<div id="output"></div>
+
+</body>
+</html>

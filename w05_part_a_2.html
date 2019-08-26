@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<title>Powers of Two 31 times</title>
+</head>
+<body>
+<script>
+
+ function powersOfTwo31times(){
+
+ var i = 2;
+ var y = 1;
+ var number = "";
+
+ while (y <= 31) {
+ number += i ** y + "<br>";
+ y += 1;
+ }
+ document.getElementById('output').innerHTML=number;
+ }
+</script>
+
+ <button type="button" onClick="powersOfTwo31times()">Click Here</button>
+
+ <div id="output"></div>
+</body>
+</html>
