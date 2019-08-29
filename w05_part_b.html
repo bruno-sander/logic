@@ -1,34 +1,33 @@
-// Robbie the Robot Functions
+<!DOCTYPE html>
+<head>
+<title>Multiple Functions</title>
+</head>
 
-function moveForward(spaces) {
-        for (var i = 0;  i < spaces;  i++) {
-            queue.push(funcForward);
-        }
-    }
+<body>
+<form>
+<input type="text" id="tempf" placeholder="Place Temperature">
+<br><br>
+<input type="text" id="windSpeed" placeholder="Wind Speed here">
+<br><br>
+<button type="button" onclick="doInputOutput()">Wind Chill Calc</button>
+</form>
 
-function moveBackward(spaces) {
-        for (var i = 0;  i < spaces;  i++) {
-            queue.push(funcBackward);
-        }
-    }
+<script>
 
-function turnLeft(quarterTurns) {
-        for (var i = 0;  i < quarterTurns;  i++) {
-            queue.push(funcLeft);
-        }
-    }
+function doInputOutput() {
+var tempF = parseFloat(document.getElementById("tempf").value),
+speed = parseFloat(document.getElementById("windSpeed").value);
+var mathIt = windChill(tempF, speed);
+document.getElementById('output').innerHTML = mathIt;
+}
 
-function turnRight(quarterTurns) {
-        for (var i = 0;  i < quarterTurns;  i++) {
-            queue.push(funcRight);
-        }
-    }
+function windChill(tempF, speed) {
+return (35.74+.6215*tempF-35.75*Math.pow(speed, .16)+.4275*tempF*Math.pow(speed, .16)).toFixed(2);
+}
 
-function run() {
-        moveForward(3);
-        turnRight(1);
-        moveForward(4);
-        turnLeft(1);
-        moveForward(3);
+</script>
+<div id="output"></div>
 
-    }
+</body>
+
+</html>
