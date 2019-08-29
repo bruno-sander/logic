@@ -1,0 +1,34 @@
+// Robbie the Robot Functions
+
+function moveForward(spaces) {
+        for (var i = 0;  i < spaces;  i++) {
+            queue.push(funcForward);
+        }
+    }
+
+function moveBackward(spaces) {
+        for (var i = 0;  i < spaces;  i++) {
+            queue.push(funcBackward);
+        }
+    }
+
+function turnLeft(quarterTurns) {
+        for (var i = 0;  i < quarterTurns;  i++) {
+            queue.push(funcLeft);
+        }
+    }
+
+function turnRight(quarterTurns) {
+        for (var i = 0;  i < quarterTurns;  i++) {
+            queue.push(funcRight);
+        }
+    }
+
+function run() {
+        moveForward(3);
+        turnRight(1);
+        moveForward(4);
+        turnLeft(1);
+        moveForward(3);
+
+    }
