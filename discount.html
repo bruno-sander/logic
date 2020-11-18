@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+
+<title>Discount Calculator</title>
+
+<script>
+function computeDiscount() {
+ var day=new Date().getDay();
+ var amount=parseFloat(document.getElementById('userInput').value);
+ var afterDiscount=(amount * 0.90);
+ var grandTotal;
+
+ if (amount>50 && (day==2 || day==3)) {
+ grandTotal=afterDiscount+(afterDiscount * 0.06);
+ } else {
+ grandTotal=amount + (amount * 0.06) ;
+ }
+ document.getElementById('display').innerHTML="The total amount is $"+grandTotal;
+}
+
+</script>
+</head>
+<body>
+ <p>Please enter the cost of the item:</p>
+ <p>$<input type="text" id="userInput"><br /><br />
+ <button type="button" onclick="computeDiscount()"> Total Amount</button><br />
+ <div id="display"></div>
+</body>
+
+</html>
